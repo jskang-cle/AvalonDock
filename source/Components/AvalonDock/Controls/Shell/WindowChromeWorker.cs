@@ -1,4 +1,4 @@
-﻿/************************************************************************
+/************************************************************************
    AvalonDock
 
    Copyright (C) 2007-2013 Xceed Software Inc.
@@ -418,6 +418,13 @@ namespace Microsoft.Windows.Shell
 			// Since we always want the client size to equal the window size, we can unconditionally handle it
 			// without having to modify the parameters.
 			handled = true;
+			if (wParam != default)
+			{
+				var client = (RECT)Marshal.PtrToStructure(lParam, typeof(RECT));
+				client.Bottom++;
+				Marshal.StructureToPtr(client, lParam, false);
+				return default;
+			}
 			return new IntPtr((int)WVR.REDRAW);
 		}
 
