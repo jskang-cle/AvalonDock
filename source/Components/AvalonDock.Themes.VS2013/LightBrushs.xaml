@@ -30,7 +30,7 @@
 	<SolidColorBrush
 		x:Key="{x:Static reskeys:ResourceKeys.AutoHideTabDefaultBackground}"
 		options:Freeze="true"
-		Color="#EEEEF2" />
+		Color="Transparent" />
 	<SolidColorBrush
 		x:Key="{x:Static reskeys:ResourceKeys.AutoHideTabDefaultBorder}"
 		options:Freeze="true"
@@ -127,7 +127,7 @@
 	<SolidColorBrush
 		x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveGlyph}"
 		options:Freeze="true"
-		Color="#FFFFFF" />
+		Color="Black" />
 
 	<!--  AccentColor  -->
 	<SolidColorBrush
